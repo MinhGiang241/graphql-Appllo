@@ -4,11 +4,12 @@ import {
   BrowserRouter as Router,
   Route,
   hashHistory,
+  Link,
   Switch,
   IndexRoute,
   Routes,
 } from "react-router-dom";
-const { createMemoryHistory } = require("history");
+import { createMemoryHistory } from "history";
 // impor ApolloClient from "apollo-client";
 import {
   ApolloClient,
@@ -32,8 +33,16 @@ const Root = () => {
   return (
     <ApolloProvider client={client}>
       <App>
-        <SongCreate />
+        <Router history={hashHistory}>
+          <Link to="/">home</Link>
+          <Link to="/new">Create newsong</Link>
+          <Route path="/" component={SongList} exact />
+          <Route path="/new" component={SongCreate} exact />
+        </Router>
       </App>
+      {/* <App>
+        <SongCreate />
+      </App> */}
     </ApolloProvider>
   );
 };
