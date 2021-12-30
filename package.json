@@ -1,0 +1,35 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack-dev-server --mode development --open",
+    "prod_build": "webpack --mode production",
+    "start": "nodemon server.js --ignore client"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.5.6",
+    "apollo-server-core": "^3.5.0",
+    "apollo-server-express": "^3.5.0",
+    "babel-core": "*",
+    "babel-loader": "7.1.5",
+    "babel-preset-env": "*",
+    "babel-preset-react": "*",
+    "cors": "^2.8.5",
+    "css-loader": "*",
+    "express": "^4.17.2",
+    "graphql": "^16.2.0",
+    "html-webpack-plugin": "*",
+    "mongoose": "^6.1.4",
+    "nodemon": "^2.0.15",
+    "react": "*",
+    "react-dom": "*",
+    "react-router-dom": "^6.2.1",
+    "style-loader": "*",
+    "webpack": "*",
+    "webpack-cli": "*",
+    "webpack-dev-middleware": "*",
+    "webpack-dev-server": "^4.7.2"
+  }
+}
